@@ -11,6 +11,7 @@ function mapStateToProps(state) {
 
 // connect calls this function and passes it the Redux store dispatch() method
 function mapDispatchToProps(dispatch) {
+  // returns an object literal with method name "clickHandler", using ES6 syntax.
   return {
     clickHandler(id) {
       dispatch({

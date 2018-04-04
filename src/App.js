@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Products from './containers/Products';
+import ShoppingCart from './containers/ShoppingCart';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
           Shopping Cart app using <code>redux</code> and <code>react-redux</code>
         </p>
         <Products/>
+        <ShoppingCart/>
       </div>
     );
   }
