@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import Products from '../components/Products';
 import {shoppingCartActions} from "../redux/constants/actionTypes";
 
-
 // connect will call this function and pass it the value returned by store.getState()
 function mapStateToProps(state) {
   return {
@@ -10,6 +9,7 @@ function mapStateToProps(state) {
   };
 }
 
+// connect calls this function and passes it the Redux store dispatch() method
 function mapDispatchToProps(dispatch) {
   return {
     clickHandler(id) {
@@ -22,5 +22,4 @@ function mapDispatchToProps(dispatch) {
 }
 
 let ProductsContainer = connect(mapStateToProps, mapDispatchToProps)(Products);
-
 export default ProductsContainer;
