@@ -6,7 +6,7 @@ function activeCategory(state=initActiveCategory, action) {
     case shoppingCartActions.CHANGE_CATEGORY:
       return action.payload;
     default:
-      return state.activeCategory;
+      return state;
   }
 }
 

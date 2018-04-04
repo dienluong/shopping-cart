@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Products from './containers/Products';
 
 class App extends Component {
   render() {
@@ -11,8 +12,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Shopping Cart app using <code>redux</code> and <code>react-redux</code>
         </p>
+        <Products/>
       </div>
     );
   }

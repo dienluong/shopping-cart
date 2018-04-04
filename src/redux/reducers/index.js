@@ -2,30 +2,17 @@ import activeCategory from "./activeCategory";
 import products from "./products";
 import shoppingCart from "./shoppingCart";
 import {combineReducers} from 'redux';
-/*
-let initialState = {
-  activeCategory: 'food',
-  products: [
-    {id: 156, name: 'pizza', cost: 10, category: 'food'},
-    {id: 257, name: 'apples', cost: 5, category: 'food'},
-    {id: 383, name: 'tv', cost: 1000, category: 'electronics'},
-    {id: 459, name: 'phone', cost: 300, category: 'electronics'},
-  ],
-  shoppingCart: []
-};
-*/
 
-let reducer = combineReducers(activeCategory, products, shoppingCart);
+let reducer = combineReducers({ activeCategory, products, shoppingCart });
 export default reducer;
-
 
 // Remember: reducer is a pure function and state is immutable; therefore, a new state obj must be created and returned.
 /*
 function reducer(state, action) {
   return {
-    activeCategory: activeCategory(state, action),
-    products: products(state, action),
-    shoppingCart: shoppingCart(state, action)
+    activeCategory: activeCategory(state.activeCategory, action),
+    products: products(state.products, action),
+    shoppingCart: shoppingCart(state.shoppingCart, action)
   };
 }
 */

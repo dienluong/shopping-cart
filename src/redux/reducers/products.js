@@ -7,7 +7,7 @@ const initProducts =  [
 function products(state=initProducts, action) {
   switch (action.type) {
     default:
-      return state.products;
+      return state;
   }
 }
 
