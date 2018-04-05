@@ -48,7 +48,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "NODE_ENV=test mocha --require babel-core/register test --recursive",
+    "test-old": "node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -91,5 +92,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "enzyme": "^3.3.0",
+    "mocha": "^5.0.5"
   }
 }
