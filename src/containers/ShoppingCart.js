@@ -3,7 +3,7 @@ import ShoppingCart from '../components/ShoppingCart';
 import {shoppingCartActions} from '../redux/constants/actionTypes';
 
 function mapStateToProps(state) {
-  const productsInCart = state.shoppingCart.map((id) => (state.products.find((product) => (product.id === id))));
+  const productsInCart = state.products.filter(product => state.shoppingCart.includes(product.id));
   return {
     products: productsInCart
   };
