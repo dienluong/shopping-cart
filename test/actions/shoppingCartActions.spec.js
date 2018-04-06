@@ -2,7 +2,7 @@ import {expect} from 'chai';
 import {removeFromCartAction, addToCartAction} from "../../src/redux/actions/shoppingCartActions";
 import {shoppingCartActions} from "../../src/redux/constants/actionTypes";
 
-describe('addToCartAction', () => {
+describe('addToCartAction action creator', () => {
   it('should return an object with payload containing specified ID', () => {
     expect(addToCartAction(23).payload).to.eql(23);
   });
@@ -12,7 +12,7 @@ describe('addToCartAction', () => {
   });
 });
 
-describe('removeFromCartAction', () => {
+describe('removeFromCartAction action creator', () => {
   it('should return an object with payload containing specified ID', () => {
     expect(removeFromCartAction(23).payload).to.eql(23);
   });
