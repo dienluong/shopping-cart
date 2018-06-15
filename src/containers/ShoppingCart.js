@@ -3,6 +3,7 @@ import ShoppingCart from '../components/ShoppingCart';
 import {removeFromCartAction} from '../redux/actions/shoppingCartActions';
 
 function mapStateToProps(state) {
+  // Put in cart only products with ID matching an ID in the state.shoppingCart array
   const productsInCart = state.products.filter(product => state.shoppingCart.includes(product.id));
   return {
     products: productsInCart

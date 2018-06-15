@@ -1,6 +1,8 @@
 import {shoppingCartActions} from "../constants/actionTypes";
 
+// An array of product IDs
 const initShoppingCart = [];
+
 function shoppingCart(state=initShoppingCart, action) {
   switch (action.type) {
     case shoppingCartActions.ADD_TO_CART:
